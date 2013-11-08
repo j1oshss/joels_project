@@ -21,12 +21,12 @@ function Update () {
 	if((this.transform.position.x) <= (-15)){
 		Destroy(gameObject);
 	}
-		var hit : RaycastHit;
-		var obsticalPosition : ;
-		var p1 : Vector3 = transform.position + charCtrl.center;
+	//	var hit : RaycastHit;
+	//	var obsticalPosition : ;
+		//var p1 : Vector3 = transform.position + charCtrl.center;
 		// Cast a sphere wrapping character controller 10 meters forward, to see if it is about to hit anything
-		if (Physics.SphereCast (p1, charCtrl.height / 2, transform.forward, hit, 10)) {
-			Destroy(player1);
-		}
+		//if (Physics.SphereCast (p1, charCtrl.height / 2, transform.forward, hit, 10)) {
+		//	Destroy(player1);
+	//	}
 }
 //Kills the player if he touches an Obstical
