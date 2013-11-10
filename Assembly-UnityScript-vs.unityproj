@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_3;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_1;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -51,51 +51,51 @@
      <Compile Include="Assets\Examples\Scripts\PlayerCollisionDetection.js" />
      <Compile Include="Assets\Examples\Scripts\PlayerControls.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_usersettingsfragment_background_gradient.xml" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\Plugins\Android\res\values\attrs.xml" />
-     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_list_row.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_image.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_friendpickerfragment.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_list_section_header.xml" />
-     <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularSmooth.shader" />
-     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_top_background.xml" />
-     <None Include="Assets\Plugins\Android\res\values-es\strings.xml" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_button_check.xml" />
-     <None Include="Assets\Plugins\Android\res\values-iw\strings.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_login_activity_layout.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_placepickerfragment.xml" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
-     <None Include="Assets\Plugins\Android\res\values-he\strings.xml" />
-     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_top_button.xml" />
-     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_checkbox.xml" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_loginbutton_blue.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_title_bar.xml" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Plugins\Android\res\values\strings.xml" />
      <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_list_selector.xml" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_usersettingsfragment.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_title_bar_stub.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_placepickerfragment_list_row.xml" />
-     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_search_box.xml" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_list_selector_background_transition.xml" />
-     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_item_background.xml" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_activity_circle_row.xml" />
-     <None Include="Assets\Plugins\Android\res\values\styles.xml" />
-     <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\Plugins\Android\res\values-iw\strings.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_placepickerfragment_list_row.xml" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Plugins\Android\res\values-es\strings.xml" />
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_list_selector_background_transition.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_title_bar.xml" />
+     <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularSmooth.shader" />
+     <None Include="Assets\Plugins\Android\res\values-he\strings.xml" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_search_box.xml" />
      <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_top_button.xml" />
      <None Include="Assets\Plugins\Android\res\drawable\com_facebook_loginbutton_silver.xml" />
- <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_top_button.xml" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Plugins\Android\res\values\strings.xml" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_list_row.xml" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_usersettingsfragment_background_gradient.xml" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Plugins\Android\res\values\attrs.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_checkbox.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_friendpickerfragment.xml" />
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_top_background.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_title_bar_stub.xml" />
+     <None Include="Assets\Plugins\Android\res\values\styles.xml" />
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_button_check.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_login_activity_layout.xml" />
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_item_background.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_image.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_picker_list_section_header.xml" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_placepickerfragment.xml" />
+     <None Include="Assets\Plugins\Android\res\drawable\com_facebook_loginbutton_blue.xml" />
+     <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\Plugins\Android\res\layout\com_facebook_usersettingsfragment.xml" />
+ <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
- <Reference Include="Assets\Facebook\Scripts\IFacebook">
+ <Reference Include="IFacebook">
  <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
  </Reference>
   </ItemGroup>

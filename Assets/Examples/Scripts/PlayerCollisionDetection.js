@@ -14,7 +14,7 @@ function Update () {
 function OnTriggerEnter(collision: Collider){
 
 if(collision.tag == "Player")
-	Debug.Log("Collision Detected");
+	Destroy(GameObject.FindGameObjectWithTag("Player"));
 
 
 }
