@@ -15,6 +15,6 @@ function OnTriggerEnter(collision: Collider){
 
 if(collision.tag == "Player"){
 	//Destroy(GameObject.FindGameObjectWithTag("Player"));
-
+	// HELLO JOEL POLL
 	}
 }
