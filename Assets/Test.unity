@@ -487,6 +487,7 @@ MonoBehaviour:
   obsticalSpawner2_2: {fileID: 605362832}
   obsticalSpawner1_3: {fileID: 1102773560}
   obsticalSpawner2_3: {fileID: 883462549}
+  acc: 10
   obstical: {fileID: 100000, guid: 745a840886a8c0746981152079643b59, type: 2}
   theObstical1: {fileID: 100000, guid: 745a840886a8c0746981152079643b59, type: 2}
   theObstical2: {fileID: 100000, guid: 745a840886a8c0746981152079643b59, type: 2}

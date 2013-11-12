@@ -10,6 +10,7 @@
 	private var object1Spawned: boolean = false;
 	private var object2Spawned: boolean = false;
 	private var object3Spawned: boolean = false;
+	public var acc : float;
 	public var obstical: GameObject;
 	public var theObstical1: GameObject;
 	public var theObstical2: GameObject;
@@ -17,9 +18,18 @@
 	public var amountToMove: float;
 	public var speed: float = 3.00;
 	private var obsticals: GameObject[];
+	private var acceleration : float;
+	private var gameLength : float;
+	private var score : float;
+	public var pwr : float;
+	public var points : float;
+	
 		
 function Start () {
-
+//? Acceleration Part (1)
+	//As time get longer the acceleration should also increase
+	//this is going to be the number ontop of the fraction
+			gameLength = Time.deltaTime;
 }
 
 function Update () {
@@ -88,11 +98,25 @@ function Update () {
 		}
 		
 	obsticals = GameObject.FindGameObjectsWithTag("Obsticals");
-	amountToMove = speed * Time.deltaTime;
+	amountToMove = speed * Time.deltaTime*(acceleration);
 	
+//? Some Error is being thrown here...Please check it out if u can, the game does seem to work
 	for(var i = 0; i < obsticals.length; i++){
 	obsticals[i].transform.Translate(Vector3.left * amountToMove);
 	}
-		
-	
+
+//? Acceleration Part (2)		
+	//this will be the fractio
+				acceleration = ((10+gameLength)/acc);
+				
+//* Point System
+		if(gameLength < points){
+			points = (gameLength + 10);
+			score = (amountToMove*(Mathf.Pow(2, pwr)));
+			pwr++;
+		}
 }
+
+
+			
+	
