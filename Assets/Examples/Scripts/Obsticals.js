@@ -22,14 +22,19 @@
 	private var gameLength : float;
 	private var score : float;
 	public var pwr : float;
-	public var points : float;
+	public var timeForNextMultiPlyer : float = 2;
+	private var multiplyer : float;
 	
 		
 function Start () {
+
+}
+
+function FixedUpdate () {
 //? Acceleration Part (1)
 	//As time get longer the acceleration should also increase
 	//this is going to be the number ontop of the fraction
-			gameLength = Time.deltaTime;
+			gameLength = Time.time;
 }
 
 function Update () {
@@ -110,11 +115,15 @@ function Update () {
 				acceleration = ((10+gameLength)/acc);
 				
 //* Point System
-		if(gameLength < points){
-			points = (gameLength + 10);
-			score = (amountToMove*(Mathf.Pow(2, pwr)));
+		if(gameLength > timeForNextMultiPlyer){
+			timeForNextMultiPlyer = (gameLength + 2);
+			multiplyer = (Mathf.Pow(2, pwr));
 			pwr++;
 		}
+		score = (amountToMove*multiplyer);
+		
+		Debug.Log("TimeForNExtMultiPlyer: "+timeForNextMultiPlyer+"\n Score: "+score+" - Multiplyer: "+pwr+"X");
+		Debug.Log("Game Length: "+gameLength);
 }
 
 
