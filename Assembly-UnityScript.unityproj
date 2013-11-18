@@ -51,6 +51,7 @@
      <Compile Include="Assets\Examples\Scripts\PlatFormSpawn.js" />
      <Compile Include="Assets\Examples\Scripts\PlayerCollisionDetection.js" />
      <Compile Include="Assets\Examples\Scripts\PlayerControls.js" />
+     <Compile Include="Assets\Pause Menu\PauseMenu.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Plugins\Android\res\drawable\com_facebook_picker_list_selector.xml" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />

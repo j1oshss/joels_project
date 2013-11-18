@@ -138,9 +138,9 @@ if(pause == true){
 }
 //GUI 
 
-function OnGUI(){
+/*function OnGUI(){
 	
-	if(Input.GetKey(KeyCode("Escape"))){
+	if(Input.GetKey(KeyCode.Escape)){
 		pause = true;
 //Pasue Menu
 		//Exit Game
@@ -150,11 +150,11 @@ function OnGUI(){
 		}
 		//Resume Game
 		if(GUI.Button(Rect(10,500, 200, 200), "Resume Game")){
-			GUI.Box(Rect(25, 25, 200, 200));
+			GUI.Box(Rect(25, 25, 200, 200), "");
 			pause = false;
 		}
 	}
-}
+}*/
 
 			
 	
