@@ -25,12 +25,20 @@
 	public var timeForNextMultiPlyer : float = 2;
 	private var multiplyer : float;
 	
+//GUI Variables
+	private var startGame : boolean = false;
+	private var exitGame : boolean = false;
+	private var mainMenu : boolean = true;
+	private var pause : boolean = false;
+
+	
 		
 function Start () {
 
 }
 
 function FixedUpdate () {
+
 //? Acceleration Part (1)
 	//As time get longer the acceleration should also increase
 	//this is going to be the number ontop of the fraction
@@ -39,8 +47,10 @@ function FixedUpdate () {
 
 function Update () {
 	
-	
-
+//If the game is Paused the game must freeze
+if(pause == true){
+	Time.timeScale = 0;
+}
 //checks that the objects have spawned
 	if(objectsSpawned == true){
 		
@@ -124,8 +134,27 @@ function Update () {
 		
 		Debug.Log("TimeForNExtMultiPlyer: "+timeForNextMultiPlyer+"\n Score: "+score+" - Multiplyer: "+pwr+"X");
 		Debug.Log("Game Length: "+gameLength);
-}
 
+}
+//GUI 
+
+function OnGUI(){
+	
+	if(Input.GetKey(KeyCode("Escape"))){
+		pause = true;
+//Pasue Menu
+		//Exit Game
+		if(GUI.Button(Rect(10,500, 200, 200), "Quit Game")){
+			exitGame = true;
+			pause = false;
+		}
+		//Resume Game
+		if(GUI.Button(Rect(10,500, 200, 200), "Resume Game")){
+			GUI.Box(Rect(25, 25, 200, 200));
+			pause = false;
+		}
+	}
+}
 
 			
 	

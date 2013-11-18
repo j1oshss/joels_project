@@ -494,6 +494,8 @@ MonoBehaviour:
   theObstical3: {fileID: 100000, guid: 745a840886a8c0746981152079643b59, type: 2}
   amountToMove: 0
   speed: 3
+  pwr: 0
+  timeForNextMultiPlyer: 2
 --- !u!1 &1038989542
 GameObject:
   m_ObjectHideFlags: 0

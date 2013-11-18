@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Examples\Scripts\Destroying Platforms.js" />
+     <Compile Include="Assets\Examples\Scripts\MainMenu.js" />
      <Compile Include="Assets\Examples\Scripts\Movement of Platforms.js" />
      <Compile Include="Assets\Examples\Scripts\Obsticals.js" />
      <Compile Include="Assets\Examples\Scripts\PlatFormSpawn.js" />
