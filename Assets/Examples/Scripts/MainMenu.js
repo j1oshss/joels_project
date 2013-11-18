@@ -29,14 +29,14 @@ function OnGUI(){
 
 		
 	if(exitGame == true){
-	 GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 100,250,150),"Do you really want to Quit?");
+	 GUI.Box(Rect(Screen.width /2 -250,Screen.height /2 - 125,600,100),"Do you really want to Quit?");
 	//Returns to main menu
-		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "No")){
+		if(GUI.Button(Rect(Screen.width /2 + 100,Screen.height /2 - 75,250,50), "No")){
 			exitGame = false;
 			mainMenu = true;
 		}
 	//Exits Game
-		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Yes")){
+		if(GUI.Button(Rect(Screen.width /2 - 250,Screen.height /2 - 75,250,50), "Yes")){
 			Application.Quit();
 		}
 	
