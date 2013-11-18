@@ -48,15 +48,21 @@ GUI.skin.button.font = pauseMenuFont;
 	if(pauseEnabled == true){
 		
 		//Make a background box
-		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 100,250,200), "Pause Menu");
-		
+		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 100,250,250), "Pause Menu");
+		//Make Resume Button
+		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Resume")){
+			pauseEnabled = false;
+			Time.timeScale = 1;
+			AudioListener.volume = 1;
+			Screen.showCursor = false;	
+		}
 		//Make Main Menu button
-		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Main Menu")){
+		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "Main Menu")){
 			Application.LoadLevel(mainMenuSceneName);
 		}
 		
 		//Make Change Graphics Quality button
-			if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "Change Graphics Quality")){
+			if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 +50,250,50), "Change Graphics Quality")){
 			
 			if(showGraphicsDropDown == false){
 				showGraphicsDropDown = true;
@@ -95,8 +101,8 @@ GUI.skin.button.font = pauseMenuFont;
 		}
 		
 		//Make quit game button
-		if (GUI.Button (Rect (Screen.width /2 - 100,Screen.height /2 + 50,250,50), "Quit To Menu")){
-			Application.LoadLevel("MainMenu");
+		if (GUI.Button (Rect (Screen.width /2 - 100,Screen.height /2 + 100,250,50), "Quit To Menu")){
+			Application.Quit();
 		}
 	}
 }
