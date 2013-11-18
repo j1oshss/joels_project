@@ -48,9 +48,9 @@ function FixedUpdate () {
 function Update () {
 	
 //If the game is Paused the game must freeze
-if(pause == true){
-	Time.timeScale = 0;
-}
+	if(pause == true){
+		Time.timeScale = 0;
+	}
 //checks that the objects have spawned
 	if(objectsSpawned == true){
 		
@@ -130,31 +130,18 @@ if(pause == true){
 			multiplyer = (Mathf.Pow(2, pwr));
 			pwr++;
 		}
-		score = (amountToMove*multiplyer);
+		score = (amountToMove*multiplyer)*100;
 		
 		Debug.Log("TimeForNExtMultiPlyer: "+timeForNextMultiPlyer+"\n Score: "+score+" - Multiplyer: "+pwr+"X");
 		Debug.Log("Game Length: "+gameLength);
 
 }
-//GUI 
 
-/*function OnGUI(){
-	
-	if(Input.GetKey(KeyCode.Escape)){
-		pause = true;
-//Pasue Menu
-		//Exit Game
-		if(GUI.Button(Rect(10,500, 200, 200), "Quit Game")){
-			exitGame = true;
-			pause = false;
-		}
-		//Resume Game
-		if(GUI.Button(Rect(10,500, 200, 200), "Resume Game")){
-			GUI.Box(Rect(25, 25, 200, 200), "");
-			pause = false;
-		}
+//GUI 
+function OnGUI(){
+	//Score Lable
+		GUI.Label (Rect (10, 10, 100, 20), ""+score+" x"+multiplyer);
 	}
-}*/
 
 			
 	
