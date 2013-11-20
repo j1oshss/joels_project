@@ -48,7 +48,7 @@ GUI.skin.button.font = pauseMenuFont;
 	if(pauseEnabled == true){
 		
 		//Make a background box
-		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 100,250,250), "Pause Menu");
+		GUI.Box(Rect(Screen.width /2 - 225,Screen.height /2 - 100,500,150), "Pause Menu");
 		//Make Resume Button
 		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Resume")){
 			pauseEnabled = false;
@@ -58,7 +58,7 @@ GUI.skin.button.font = pauseMenuFont;
 		}
 		//Make Main Menu button
 		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "Main Menu")){
-			Application.LoadLevel(mainMenuSceneName);
+			Application.LoadLevel("mainMenu");
 		}
 		
 		//Make Change Graphics Quality button
