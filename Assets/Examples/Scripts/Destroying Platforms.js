@@ -18,7 +18,7 @@ function Update () {
 	//for testing purposes//
 	//this.transform.Translate(Vector3.down * (Time.deltaTime*2), Space.World);
 	
-	if((this.transform.position.x) <= (-15)){
+	if((this.transform.position.x) >= (15)){
 		Destroy(gameObject);
 	}
 	//	var hit : RaycastHit;

@@ -6,10 +6,12 @@
 	var materials : Material[];
 	var running : boolean = true;
 	var controller : CharacterController; 
+	var timer : int;
+	var numberMaterial : int = 0;
 	
 function Start() {
-	gameTime = Time.time;
 	controller = GetComponent(CharacterController);
+	renderer.material = materials[0];
 }
 
 function Update(){
@@ -24,46 +26,65 @@ function Update(){
 }
 
 function FixedUpdate () {
-	
+	timer++;
 		StickManRun();
 }
 
 //This is for the Running Animation
 function StickManRun(){
-		if(renderer.material == materials[1]){
+		if(controller.isGrounded == true){
 	//Changes Material
-		renderer.material = materials[0];
-	}
-		if(Time.time - gameTime == 0.5){
-			gameTime = Time.time;
-			if(numberOfOffsets <= 3){
-			renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
-			if(numberOfOffsets == 3){
-					numberOfOffsets = 1;
-				}else{
-					numberOfOffsets++;
+			if(numberMaterial != 0){
+				renderer.material = materials[0];
+				numberMaterial = 0;
+			}
+		}else
+			if(controller.isGrounded == false)
+			{
+				if(numberMaterial != 1){
+					renderer.material = materials[1];
+					Debug.Log("Cheese");
+					numberMaterial = 1;
 				}
 			}
-				
-		}
-}
-
-//This Is for the Jumping Animation
-function StickManJump(){
-	if(renderer.material == materials[0]){
-	//Changes Material
-		renderer.material = materials[1];
-	}
-		if(Time.time - gameTime == 0.5){
-			gameTime = Time.time;
-			if(numberOfOffsets <= 3){
-			renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
-			if(numberOfOffsets == 3){
-					numberOfOffsets = 1;
-				}else{
-					numberOfOffsets++;
+			//If the Player is Jumping
+			if(numberMaterial == 1){
+				scrollSpeed = 0.33;
+			}else
+			//If the Player is Running
+			{
+				scrollSpeed = 0.2;
+			}
+			
+			
+			if(numberMaterial == 0){
+			//If the player is Running
+				if(timer == 10){
+					timer = 0;
+					if(numberOfOffsets <= 3){
+					renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
+					if(numberOfOffsets == 3){
+							numberOfOffsets = 1;
+						}else{
+							numberOfOffsets++;
+						}
+					}
+						
+				}
+			}else{
+			//If the Player is Jumping	
+				if(timer == 10){
+					timer = 0;
+					if(numberOfOffsets <= 3){
+					renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
+					if(numberOfOffsets == 2){
+							numberOfOffsets = 2;
+						}else{
+							numberOfOffsets++;
+						}
+					}
+						
 				}
 			}
-				
-		}
+		
 }

@@ -105,7 +105,7 @@ function Update () {
 			
 		}
 //Checks if the Respawns can start which is when the obsticals are far enough down the path	
-		if(theObstical3.transform.position.x < 10){
+		if(theObstical3.transform.position.x > -9){
 			objectsSpawned = false;
 			object1Spawned = false;
 			object2Spawned = false;
@@ -117,7 +117,7 @@ function Update () {
 	
 //? Some Error is being thrown here...Please check it out if u can, the game does seem to work
 	for(var i = 0; i < obsticals.length; i++){
-	obsticals[i].transform.Translate(Vector3.left * amountToMove);
+	obsticals[i].transform.Translate(Vector3.right * amountToMove);
 	}
 
 //? Acceleration Part (2)		

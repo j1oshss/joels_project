@@ -660,6 +660,7 @@ GameObject:
   - 23: {fileID: 1327096288}
   - 143: {fileID: 1327096289}
   - 114: {fileID: 1327096292}
+  - 114: {fileID: 1327096293}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Player
@@ -679,7 +680,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80181f214d86b0a4ab512982455e0779, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -712,7 +713,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1327096287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
   m_LocalPosition: {x: -5, y: 3.15083098, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
@@ -732,6 +733,27 @@ MonoBehaviour:
   jumpSpeed: 6
   gravity: 9
   jumpTime: 1.5
+--- !u!114 &1327096293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1327096287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6eacc8ea87b894f9805e718b9ff67c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: .200000003
+  numberOfOffsets: 1
+  gameTime: 0
+  materials:
+  - {fileID: 2100000, guid: 80181f214d86b0a4ab512982455e0779, type: 2}
+  - {fileID: 2100000, guid: 1db87eecd6c10ba408dd488ffba0f2a3, type: 2}
+  running: 1
+  controller: {fileID: 0}
+  timer: 0
+  numberMaterial: 0
 --- !u!1 &1747142601
 GameObject:
   m_ObjectHideFlags: 0
