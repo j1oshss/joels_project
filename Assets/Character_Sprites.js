@@ -8,6 +8,8 @@
 	var controller : CharacterController; 
 	var timer : int;
 	var numberMaterial : int = 0;
+	var accTimer : int = 0;
+	var acc : int = 6;
 	
 function Start() {
 	controller = GetComponent(CharacterController);
@@ -26,8 +28,21 @@ function Update(){
 }
 
 function FixedUpdate () {
+	if(Input.GetKeyDown(KeyCode.Space)){
+		numberOfOffsets = 0;
+	}
 	timer++;
-		StickManRun();
+	accTimer++;
+	if(accTimer == 40){
+		if(acc != 1){
+			acc--;
+			timer = 0;
+			accTimer = 0;
+			Debug.Log("Speeding Up");
+		}
+	}
+			StickManRun();
+		
 }
 
 //This is for the Running Animation
@@ -43,7 +58,6 @@ function StickManRun(){
 			{
 				if(numberMaterial != 1){
 					renderer.material = materials[1];
-					Debug.Log("Cheese");
 					numberMaterial = 1;
 				}
 			}
@@ -59,13 +73,15 @@ function StickManRun(){
 			
 			if(numberMaterial == 0){
 			//If the player is Running
-				if(timer == 10){
+				if(timer == 1*acc){
 					timer = 0;
-					if(numberOfOffsets <= 3){
+					if(numberOfOffsets <= 4){
 					renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
-					if(numberOfOffsets == 3){
-							numberOfOffsets = 1;
+					Debug.Log("Still Running");
+					if(numberOfOffsets == 4){
+							numberOfOffsets = 0;
 						}else{
+							
 							numberOfOffsets++;
 						}
 					}
@@ -73,18 +89,19 @@ function StickManRun(){
 				}
 			}else{
 			//If the Player is Jumping	
-				if(timer == 10){
+				if(timer == 1*acc){
 					timer = 0;
-					if(numberOfOffsets <= 3){
-					renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
-					if(numberOfOffsets == 2){
-							numberOfOffsets = 2;
-						}else{
-							numberOfOffsets++;
-						}
+					if(numberOfOffsets <= 2){
+						if(numberOfOffsets == 2){
+								numberOfOffsets = 2;
+							}else{
+								renderer.material.SetTextureOffset("_MainTex", Vector2((numberOfOffsets*scrollSpeed), 0));
+								numberOfOffsets++;
+							}
 					}
 						
 				}
 			}
 		
 }
+

@@ -132,8 +132,8 @@ function Update () {
 		}
 		score = (amountToMove*multiplyer)*100;
 		
-		Debug.Log("TimeForNExtMultiPlyer: "+timeForNextMultiPlyer+"\n Score: "+score+" - Multiplyer: "+pwr+"X");
-		Debug.Log("Game Length: "+gameLength);
+		//Debug.Log("TimeForNExtMultiPlyer: "+timeForNextMultiPlyer+"\n Score: "+score+" - Multiplyer: "+pwr+"X");
+		//Debug.Log("Game Length: "+gameLength);
 
 }
 
