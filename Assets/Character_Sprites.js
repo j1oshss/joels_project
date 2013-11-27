@@ -33,8 +33,8 @@ function FixedUpdate () {
 	}
 	timer++;
 	accTimer++;
-	if(accTimer == 40){
-		if(acc != 1){
+	if(accTimer == 15000){
+		if(acc != 4){
 			acc--;
 			timer = 0;
 			accTimer = 0;

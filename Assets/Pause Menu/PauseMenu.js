@@ -6,6 +6,9 @@
 var mainMenuSceneName : String;
 var pauseMenuFont : Font;
 private var pauseEnabled = false;			
+var hoveringResume : boolean;
+var hoveringQuit : boolean;
+var hoveringMain : boolean;
 
 function Start(){
 	pauseEnabled = false;
@@ -15,6 +18,21 @@ function Start(){
 }
 
 function Update(){
+	//Hover State On Resume Button
+		if(Input.mousePosition.y <= Screen.height /2 +150 && Input.mousePosition.y <= Screen.height /2){
+			hoveringResume = true;
+			hoveringQuit = false;
+			hoveringMain = false;
+		}else
+			if(Input.mousePosition.y <= Screen.height /2 && Input.mousePosition.y <= Screen.height /2 + 75){
+				hoveringQuit = true;
+				hoveringResume = false;
+				hoveringMain = false;
+			}else{
+				hoveringQuit = false;
+				hoveringResume = false;
+				hoveringMain = true;
+			}
 
 	//check if pause button (escape key) is pressed
 	if(Input.GetKeyDown("escape")){
@@ -44,11 +62,20 @@ function OnGUI(){
 
 GUI.skin.box.font = pauseMenuFont;
 GUI.skin.button.font = pauseMenuFont;
+	GUI.backgroundColor = new Color(255,255,255,0f);
+	GUI.skin.box.fontSize = 50;
+	GUI.skin.button.fontSize = 30;
+
+	GUI.color = Color.black;
 
 	if(pauseEnabled == true){
 		
 		//Make a background box
-		GUI.Box(Rect(Screen.width /2 - 225,Screen.height /2 - 100,500,150), "Pause Menu");
+		GUI.Box(Rect(Screen.width /2 - 225,Screen.height /2 -150,500,150), "Pause Menu");
+			//Hover State On Resume Button
+			if(hoveringResume == true){
+				GUI.skin.button.fontSize = 40;
+			}
 		//Make Resume Button
 		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Resume")){
 			pauseEnabled = false;
@@ -56,13 +83,19 @@ GUI.skin.button.font = pauseMenuFont;
 			AudioListener.volume = 1;
 			Screen.showCursor = false;	
 		}
+			GUI.skin.button.fontSize = 30;
+				//Hover State On Resume Button
+			if(hoveringMain == true){
+				GUI.skin.button.fontSize = 40;
+			}
+		
 		//Make Main Menu button
 		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "Main Menu")){
 			Application.LoadLevel("mainMenu");
 		}
-		
+			GUI.skin.button.fontSize = 30;
 		//Make Change Graphics Quality button
-			if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 +50,250,50), "Change Graphics Quality")){
+			/*if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 +50,250,50), "Change Graphics Quality")){
 			
 			if(showGraphicsDropDown == false){
 				showGraphicsDropDown = true;
@@ -98,11 +131,15 @@ GUI.skin.button.font = pauseMenuFont;
 			if(Input.GetKeyDown("escape")){
 				showGraphicsDropDown = false;
 			}
-		}
-		
+		}*/
+			//Hover State On Resume Button
+			if(hoveringQuit == true){
+				GUI.skin.button.fontSize = 40;
+			}
 		//Make quit game button
-		if (GUI.Button (Rect (Screen.width /2 - 100,Screen.height /2 + 100,250,50), "Quit To Menu")){
+		if (GUI.Button (Rect (Screen.width /2 - 100,Screen.height /2 + 75,250,50), "Quit To Menu")){
 			Application.Quit();
 		}
+
 	}
 }

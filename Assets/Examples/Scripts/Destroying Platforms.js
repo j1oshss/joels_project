@@ -10,7 +10,6 @@ function Start () {
 }
 
 function Update () {
-	
 	positionOfRayCast = (Vector3(gameObject.transform.position.x, (gameObject.transform.position.y - 0.5), gameObject.transform.position.z));
 	//changed the destroyer to y position for test CHAGE BACK!!
 
@@ -29,4 +28,6 @@ function Update () {
 		//	Destroy(player1);
 	//	}
 }
+
+
 //Kills the player if he touches an Obstical

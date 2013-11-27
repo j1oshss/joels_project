@@ -4,13 +4,19 @@
 	var jumpSpeed : float;
 	var gravity : float;
 	var jumpTime : float;
-
+	public var destroyedPlayer : boolean;
+	
 
 
 
 	private var moveDirection : Vector3 = Vector3.zero;
 
 	function Update() {
+		if(gameObject == null){
+			destroyedPlayer = true;
+		}else{
+			destroyedPlayer = false;
+		}
 	
 		var controller : CharacterController = GetComponent(CharacterController);
 			
@@ -23,7 +29,7 @@
 			moveDirection *= speed;
 		
 			
-			if (Input.GetButtonDown("Jump") && Time.time >= jumpTime) {
+			if (Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpSpeed;
 			}
 		}else
